@@ -16,10 +16,10 @@ for message in st.session_state.messages:
 if prompt := st.chat_input("Warum kann mein Vermieter die Kaution behalten?"):
     st.chat_message("user").markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
-
+    
     response = GRAPH.invoke(
         {"messages": st.session_state.messages[1:]},
-        config={"configurable": {"thread_id": 42}}
+        config={"configurable": {"thread_id": 42}},
     )
     response_message = response["messages"][-1].content
     with st.chat_message("assistant"):
