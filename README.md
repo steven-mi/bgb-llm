@@ -1,6 +1,4 @@
-# RAG Template
-
-Simple templates to get started with RAG
+# BGB LLM
 
 ## Getting Started
 
